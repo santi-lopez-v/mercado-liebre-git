@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Register</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/951bf21343.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="main-header">
+            <section class="header-superior">
+                <img src="/images/logo.svg" id="logo">
+                
+                <form action="/search-bar" method="POST" class="buscador">
+                    <input id="search-bar" placeholder="Buscar productos, marcas y más...">
+                    <button id="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <!--<div class="buscador">
+                    <input id="search-bar" placeholder="Buscar productos, marcas y más...">
+                    <button id="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>-->
+            </section>
+            <p id="texto-inicial"><i class="fa-solid fa-hand-holding-dollar"></i> Comprá en cuotas y sin tarjeta de crédito</p>
+        </div>
+        
+        <nav class="padre-navbar">
+            <ul class="site">
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Tiendas oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>    
+            </ul>
+            <ul class="navbar">
+                <li><a href="/register">Creá tu cuenta <i class="fa-regular fa-id-card"></i></a></li>
+                <li><a href="/login">Ingresá <i class="fa-solid fa-right-to-bracket"></i></a></li>
+                <li><a href="#">Mis compras <i class="fa-sharp fa-solid fa-basket-shopping"></i></a></li>
+            </ul>
+        </nav>
+        <div class="burger-menu">
+            <i class="fas fa-bars icono-menu"></i>
+        </div>
+    </header>
+    
+    <main class="body-registro">
+        <form action="/register" method="POST" class="formulario-registro">
+            <input type="text" placeholder="Nombre y apellido">
+            <span class="feedback"></span>
+            <input type="text" placeholder="Nombre de usuario">
+            <span class="feedback"></span>
+            <input type="email" placeholder="E-mail" id="email">
+            <span class="feedback">Mail incorrecto.</span>
+            <label for="nacimiento" class="texto-date">Fecha de nacimiento</label>
+            <input type="date" name="nacimiento" id="date">
+            <input type="text" placeholder="Domicilio" id="domicilio">
+            <span class="feedback">Domicilio incorrecto.</span>
+            <label for="tipo-de-usuario" class="texto-usuario">Perfil de usuario</label>
+            <div class="textos-tipo-usuario">
+                <input type="radio" name="tipo-de-usuario" value="comprador" class="puntos">
+                <label for="tipo-de-usuario" class="usuarios">Comprador</label>
+                <input type="radio" name="tipo-de-usuario" value="vendedor" class="puntos">
+                <label for="tipo-de-usuario" class="usuarios">Vendedor</label>
+            </div>
+            <p class="texto-intereses">Intereses</p>
+            <div class="container-intereses">
+                <div class="intereses">
+                    <input class="puntos" type="checkbox" name="electro" value="electro">
+                    <label for="electro">Electro</label>
+                </div>
+                <div class="intereses">
+                    <input class="puntos" type="checkbox" name="Moda" value="Moda">
+                    <label for="Moda">Moda</label>
+                </div>
+                <div class="intereses">
+                    <input class="puntos" type="checkbox" name="Hogar" value="Hogar">
+                    <label for="Hogar">Hogar</label>
+                </div>
+                <div class="intereses">
+                    <input class="puntos" type="checkbox" name="Juguetería" value="Juguetería">
+                    <label for="Juguetería">Juguetería</label>
+                </div>
+                <div class="intereses">
+                    <input class="puntos" type="checkbox" name="Vida sana" value="Vida sana">
+                    <label for="Vida sana">Vida sana</label>
+                </div>
+            </div>
+            <p class="texto-foto">Inserte foto de usuario</p>
+            <input type="file" name="foto" accept=".jpg" id="foto">
+            <span class="feedback">Formato de imagen incompatible.</span>
+            <p class="texto-contraseña">Contraseña</p>
+            <input type="password" name="password">
+            <span class="feedback">La contraseña debe tener un mínimo de 8 caracteres.</span>
+            <p class="texto-contraseña">Confirmar contraseña</p>
+            <input type="password" name="password">
+            <span class="feedback">Las contraseñas no coinciden.</span>
+            <div class="buttons">
+                <button class="button-enviar" type="button"><a href="/" id="a-enviar">Enviar</a></button> 
+                <button type="reset" class="button-borrar">Borrar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
